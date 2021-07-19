@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ingreso-egreso-app-820bd": {
+      "hosting": {
+        "ingresoEbresoApp": [
+          "ingreso-egreso-app-820bd"
+        ]
+      }
+    }
+  }
+}
