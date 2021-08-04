@@ -10,7 +10,8 @@
                 <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
                 <div class="input-group-append">
                   <span class="input-group-text">
-                    <i [ngStyle]="{'color': registroForm.get('nombre').valid ? 'green' : '#b6b6b6' }" class="fa fa-check-circle"></i>
+                    <em [ngStyle]="{'color': registroForm.get('nombre').valid ? 'green' : '#b6b6b6' }"
+                      class="fa fa-check-circle"></em>
                   </span>
                 </div>
               </div>
@@ -20,7 +21,8 @@
                 <input type="email" class="form-control" placeholder="Correo" formControlName="correo">
                 <div class="input-group-append">
                   <span class="input-group-text">
-                    <i [ngStyle]="{'color': registroForm.get('correo').valid ? 'green' : '#b6b6b6' }" class="fa fa-check-circle"></i>
+                    <em [ngStyle]="{'color': registroForm.get('correo').valid ? 'green' : '#b6b6b6' }"
+                      class="fa fa-check-circle"></em>
                   </span>
                 </div>
               </div>
@@ -30,14 +32,21 @@
                 <input type="password" class="form-control" placeholder="Password" formControlName="password">
                 <div class="input-group-append">
                   <span class="input-group-text">
-                    <i [ngStyle]="{'color': registroForm.get('password').valid ? 'green' : '#b6b6b6' }" class="fa fa-check-circle"></i>
+                    <em [ngStyle]="{'color': registroForm.get('password').valid ? 'green' : '#b6b6b6' }"
+                      class="fa fa-check-circle"></em>
                   </span>
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <button type="submit" class="btn btn-primary submit-btn btn-block" [disabled]="registroForm.invalid">Crear cuenta</button>
+              <button type="submit" class="btn btn-primary submit-btn btn-block" [disabled]="registroForm.invalid"
+                *ngIf="!cargando">Crear cuenta</button>
+
+              <button type="button" class="btn btn-primary submit-btn btn-block" [disabled]="true" *ngIf="cargando">
+                <em class="fa fa-spin fa-sync"></em>
+                Cargando
+              </button>
             </div>
             <div class="text-block text-center my-3">
               <span class="text-small font-weight-semibold">ya tienes una cuenta?</span>
