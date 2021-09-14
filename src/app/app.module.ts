@@ -25,6 +25,8 @@ import { AngularFireAuthModule  } from '@angular/fire/auth';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { appReducers } from './app.reducer';
+import { OrdenIngresoPipe } from './pipes/orden-ingreso.pipe';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { appReducers } from './app.reducer';
     DetalleComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrdenIngresoPipe
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { appReducers } from './app.reducer';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
       autoPause: true, // Pauses recording actions and state changes when the extension window is not open
-    })
+    }),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

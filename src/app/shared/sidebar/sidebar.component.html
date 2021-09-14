@@ -9,7 +9,7 @@
           </div>
 
           <div class="text-wrapper">
-            <p class="profile-name">Cristobal Colón</p>
+            <p class="profile-name">{{ nombre }}</p>
             <div>
               <small class="designation text-muted">Gerente</small>
             </div>
@@ -21,28 +21,28 @@
 
     <li class="nav-item">
       <a routerLink="/" class="nav-link">
-        <i class="menu-icon fa fa-tachometer-alt"></i>
+        <em class="menu-icon fa fa-tachometer-alt"></em>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
 
     <li class="nav-item">
       <a routerLink="/ingreso-egreso" class="nav-link">
-        <i class="menu-icon fa fa-clipboard-list"></i>
+        <em class="menu-icon fa fa-clipboard-list"></em>
         <span class="menu-title">Ingresos y Egresos</span>
       </a>
     </li>
 
     <li class="nav-item">
       <a routerLink="/detalle" class="nav-link">
-        <i class="menu-icon fa fa-table"></i>
+        <em class="menu-icon fa fa-table"></em>
         <span class="menu-title">Detalle</span>
       </a>
     </li>
 
     <li class="nav-item">
       <a (click)="logOut()" class="nav-link cursor" style="cursor: pointer;">
-        <i class="menu-icon fa fa-sign-out-alt"></i>
+        <em class="menu-icon fa fa-sign-out-alt"></em>
         <span class="menu-title">Cerrar sesión</span>
       </a>
     </li>
